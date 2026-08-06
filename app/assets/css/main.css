@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-white text-gray-900 dark:bg-gray-950 dark:text-gray-100;
+    /* OpenType ligatures and contextual alternates — improves mixed Latin/CJK rendering */
+    font-feature-settings:
+      'rlig' 1,
+      'calt' 1;
+  }
+
+  h1 {
+    @apply text-3xl font-bold;
+  }
+
+  h2 {
+    @apply text-2xl font-semibold;
+  }
+
+  h3 {
+    @apply text-xl font-semibold;
+  }
+}
+
+@layer components {
+  /* max-w-4xl keeps tutorial prose within a comfortable reading measure */
+  .page-container {
+    @apply max-w-4xl mx-auto px-6 py-8;
+  }
+
+  .section-card {
+    @apply bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-xl p-6 shadow-sm;
+  }
+
+  .demo-area {
+    @apply border-2 border-dashed border-gray-300 dark:border-gray-700 rounded-lg p-4 my-4 bg-gray-50 dark:bg-gray-900;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors font-medium text-sm;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center px-4 py-2 bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-gray-100 rounded-lg hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors font-medium text-sm;
+  }
+}
